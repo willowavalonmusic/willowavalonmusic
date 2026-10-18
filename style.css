@@ -1,0 +1,382 @@
+/* Willow Avalon Tour Website
+   HTML5 and CSS3 only
+*/
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+/* Color variables */
+:root {
+  --ink: #161614;
+  --paper: #f2eee6;
+  --muted: #77736c;
+  --line: rgba(22, 22, 20, 0.23);
+  --accent: #b9a889;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+/* Header */
+.site-header {
+  min-height: 100px;
+  padding: 24px 5.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Logo */
+.wordmark {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(23px, 2.1vw, 34px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: clamp(15px, 2.1vw, 32px);
+}
+
+.main-nav a {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover {
+  opacity: 0.55;
+}
+
+.main-nav .active {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 5px;
+}
+
+/* Main content */
+main {
+  min-height: 68vh;
+}
+
+.tour-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px 36px 95px;
+}
+
+/* Decorative symbols */
+.ornament {
+  text-align: center;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.ornament-top {
+  padding: 18px 0 28px;
+}
+
+.ornament-bottom {
+  margin: 24px 0 45px;
+  font-size: 18px;
+}
+
+/* Main heading */
+h1 {
+  margin: 0;
+  text-align: center;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(32px, 4.3vw, 56px);
+  letter-spacing: 0.04em;
+}
+
+/* Tour list */
+.event-list {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* Individual event */
+.event {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 25px;
+  min-height: 112px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.event:first-child {
+  border-top: 1px solid var(--line);
+}
+
+/* Event date */
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+.month,
+.year {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.day {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 35px;
+  line-height: 1.15;
+}
+
+.year {
+  margin-top: 3px;
+  color: var(--muted);
+}
+
+/* Event information */
+.event-info h2 {
+  margin: 0 0 7px;
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.event-info p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Ticket buttons */
+.ticket-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-width: 112px;
+  padding: 13px 17px;
+  border: 1px solid var(--ink);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-size: 10px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.ticket-link:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Tour notification section */
+.notify {
+  max-width: 880px;
+  margin: 55px auto 0;
+  padding: 34px 20px;
+  text-align: center;
+  background: #e7e0d4;
+}
+
+.notify p {
+  margin: 0 auto 18px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(19px, 2vw, 25px);
+}
+
+.notify > a {
+  display: inline-block;
+  padding: 13px 23px;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+}
+
+.notify > a:hover {
+  opacity: 0.8;
+}
+
+/* Powered-by text */
+.powered {
+  display: block;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.powered strong {
+  color: var(--ink);
+  letter-spacing: 0.05em;
+}
+
+/* Footer */
+.site-footer {
+  padding: 27px 5.2% 22px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 28px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 22px;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--ink);
+}
+
+.cookie-link {
+  margin-left: auto;
+}
+
+/* Tablet and mobile layouts */
+@media (max-width: 760px) {
+  .site-header {
+    padding: 23px 20px 18px;
+    min-height: auto;
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  .main-nav {
+    justify-content: center;
+    gap: 13px 19px;
+  }
+
+  .main-nav a {
+    font-size: 10px;
+  }
+
+  .tour-section {
+    padding: 25px 20px 65px;
+  }
+
+  .ornament-top {
+    padding-top: 12px;
+  }
+
+  .ornament-bottom {
+    margin-bottom: 30px;
+  }
+
+  .event {
+    grid-template-columns: 57px minmax(0, 1fr) auto;
+    gap: 14px;
+    min-height: 100px;
+  }
+
+  .day {
+    font-size: 29px;
+  }
+
+  .event-info h2 {
+    font-size: 14px;
+  }
+
+  .event-info p {
+    font-size: 12px;
+  }
+
+  .ticket-link {
+    min-width: auto;
+    padding: 11px 10px;
+    gap: 6px;
+    font-size: 9px;
+  }
+
+  .site-footer {
+    padding: 25px 18px;
+    gap: 14px 20px;
+  }
+
+  .cookie-link {
+    margin-left: 0;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 420px) {
+  .event {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 12px;
+    padding: 17px 0;
+  }
+
+  .ticket-link {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 3px;
+  }
+
+  .date {
+    grid-row: span 2;
+    align-self: start;
+    padding-top: 4px;
+  }
+
+  .day {
+    font-size: 27px;
+  }
+
+  .month,
+  .year {
+    font-size: 9px;
+  }
+
+  .notify {
+    padding: 28px 15px;
+  }
+}
